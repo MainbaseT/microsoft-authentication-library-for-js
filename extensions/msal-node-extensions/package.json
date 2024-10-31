@@ -70,7 +70,7 @@
     "eslint-config-msal": "file:../../shared-configs/eslint-config-msal",
     "jest": "^29.5.0",
     "node-addon-api": "^6.1.0",
-    "rollup": "^3.20.2",
+    "rollup": "^3.29.5",
     "shx": "^0.3.4",
     "ts-jest": "^29.1.0",
     "ts-jest-mock-import-meta": "^1.1.0",
