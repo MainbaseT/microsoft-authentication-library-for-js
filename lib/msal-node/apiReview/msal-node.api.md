@@ -6,82 +6,82 @@
 
 /// <reference types="node" />
 
-import { AccessTokenCache } from '@azure/msal-common';
-import { AccessTokenEntity } from '@azure/msal-common';
-import { AccountCache } from '@azure/msal-common';
-import { AccountEntity } from '@azure/msal-common';
-import { AccountInfo } from '@azure/msal-common';
-import { ApplicationTelemetry } from '@azure/msal-common';
-import { AppMetadataCache } from '@azure/msal-common';
-import { AppMetadataEntity } from '@azure/msal-common';
-import { AppTokenProviderParameters } from '@azure/msal-common';
-import { AppTokenProviderResult } from '@azure/msal-common';
-import { AuthenticationResult } from '@azure/msal-common';
-import { AuthError } from '@azure/msal-common';
-import { AuthErrorCodes } from '@azure/msal-common';
-import { AuthErrorMessage } from '@azure/msal-common';
-import { Authority } from '@azure/msal-common';
-import { AuthorityMetadataEntity } from '@azure/msal-common';
-import { AuthorizationCodePayload } from '@azure/msal-common';
-import { AzureCloudInstance } from '@azure/msal-common';
-import { AzureCloudOptions } from '@azure/msal-common';
-import { AzureRegionConfiguration } from '@azure/msal-common';
-import { BaseAuthRequest } from '@azure/msal-common';
-import { BaseClient } from '@azure/msal-common';
-import { CacheManager } from '@azure/msal-common';
-import { CacheOutcome } from '@azure/msal-common';
-import { ClientAssertionCallback } from '@azure/msal-common';
-import { ClientAuthError } from '@azure/msal-common';
-import { ClientAuthErrorCodes } from '@azure/msal-common';
-import { ClientAuthErrorMessage } from '@azure/msal-common';
-import { ClientConfiguration } from '@azure/msal-common';
-import { ClientConfigurationError } from '@azure/msal-common';
-import { ClientConfigurationErrorCodes } from '@azure/msal-common';
-import { ClientConfigurationErrorMessage } from '@azure/msal-common';
-import { CommonAuthorizationCodeRequest } from '@azure/msal-common';
-import { CommonAuthorizationUrlRequest } from '@azure/msal-common';
-import { CommonClientCredentialRequest } from '@azure/msal-common';
-import { CommonDeviceCodeRequest } from '@azure/msal-common';
-import { CommonOnBehalfOfRequest } from '@azure/msal-common';
-import { CommonRefreshTokenRequest } from '@azure/msal-common';
-import { CommonSilentFlowRequest } from '@azure/msal-common';
-import { CommonUsernamePasswordRequest } from '@azure/msal-common';
-import { DeviceCodeResponse } from '@azure/msal-common';
+import { AccessTokenCache } from '@azure/msal-common/node';
+import { AccessTokenEntity } from '@azure/msal-common/node';
+import { AccountCache } from '@azure/msal-common/node';
+import { AccountEntity } from '@azure/msal-common/node';
+import { AccountInfo } from '@azure/msal-common/node';
+import { ApplicationTelemetry } from '@azure/msal-common/node';
+import { AppMetadataCache } from '@azure/msal-common/node';
+import { AppMetadataEntity } from '@azure/msal-common/node';
+import { AppTokenProviderParameters } from '@azure/msal-common/node';
+import { AppTokenProviderResult } from '@azure/msal-common/node';
+import { AuthenticationResult } from '@azure/msal-common/node';
+import { AuthError } from '@azure/msal-common/node';
+import { AuthErrorCodes } from '@azure/msal-common/node';
+import { AuthErrorMessage } from '@azure/msal-common/node';
+import { Authority } from '@azure/msal-common/node';
+import { AuthorityMetadataEntity } from '@azure/msal-common/node';
+import { AuthorizationCodePayload } from '@azure/msal-common/node';
+import { AzureCloudInstance } from '@azure/msal-common/node';
+import { AzureCloudOptions } from '@azure/msal-common/node';
+import { AzureRegionConfiguration } from '@azure/msal-common/node';
+import { BaseAuthRequest } from '@azure/msal-common/node';
+import { BaseClient } from '@azure/msal-common/node';
+import { CacheManager } from '@azure/msal-common/node';
+import { CacheOutcome } from '@azure/msal-common/node';
+import { ClientAssertionCallback } from '@azure/msal-common/node';
+import { ClientAuthError } from '@azure/msal-common/node';
+import { ClientAuthErrorCodes } from '@azure/msal-common/node';
+import { ClientAuthErrorMessage } from '@azure/msal-common/node';
+import { ClientConfiguration } from '@azure/msal-common/node';
+import { ClientConfigurationError } from '@azure/msal-common/node';
+import { ClientConfigurationErrorCodes } from '@azure/msal-common/node';
+import { ClientConfigurationErrorMessage } from '@azure/msal-common/node';
+import { CommonAuthorizationCodeRequest } from '@azure/msal-common/node';
+import { CommonAuthorizationUrlRequest } from '@azure/msal-common/node';
+import { CommonClientCredentialRequest } from '@azure/msal-common/node';
+import { CommonDeviceCodeRequest } from '@azure/msal-common/node';
+import { CommonOnBehalfOfRequest } from '@azure/msal-common/node';
+import { CommonRefreshTokenRequest } from '@azure/msal-common/node';
+import { CommonSilentFlowRequest } from '@azure/msal-common/node';
+import { CommonUsernamePasswordRequest } from '@azure/msal-common/node';
+import { DeviceCodeResponse } from '@azure/msal-common/node';
 import http from 'http';
 import https from 'https';
-import { IAppTokenProvider } from '@azure/msal-common';
-import { ICachePlugin } from '@azure/msal-common';
-import { ICrypto } from '@azure/msal-common';
-import { IdTokenCache } from '@azure/msal-common';
-import { IdTokenClaims } from '@azure/msal-common';
-import { IdTokenEntity } from '@azure/msal-common';
-import { INativeBrokerPlugin } from '@azure/msal-common';
-import { INetworkModule } from '@azure/msal-common';
-import { InteractionRequiredAuthError } from '@azure/msal-common';
-import { InteractionRequiredAuthErrorCodes } from '@azure/msal-common';
-import { InteractionRequiredAuthErrorMessage } from '@azure/msal-common';
-import { ISerializableTokenCache } from '@azure/msal-common';
-import { Logger } from '@azure/msal-common';
-import { LoggerOptions } from '@azure/msal-common';
-import { LogLevel } from '@azure/msal-common';
-import { NetworkRequestOptions } from '@azure/msal-common';
-import { NetworkResponse } from '@azure/msal-common';
-import { PkceCodes } from '@azure/msal-common';
-import { PromptValue } from '@azure/msal-common';
-import { ProtocolMode } from '@azure/msal-common';
-import { RefreshTokenCache } from '@azure/msal-common';
-import { RefreshTokenEntity } from '@azure/msal-common';
-import { ResponseMode } from '@azure/msal-common';
-import { ServerAuthorizationCodeResponse } from '@azure/msal-common';
-import { ServerError } from '@azure/msal-common';
-import { ServerTelemetryEntity } from '@azure/msal-common';
-import { ServerTelemetryManager } from '@azure/msal-common';
-import { StaticAuthorityOptions } from '@azure/msal-common';
-import { ThrottlingEntity } from '@azure/msal-common';
-import { TokenCacheContext } from '@azure/msal-common';
-import { TokenKeys } from '@azure/msal-common';
-import { ValidCacheType } from '@azure/msal-common';
-import { ValidCredentialType } from '@azure/msal-common';
+import { IAppTokenProvider } from '@azure/msal-common/node';
+import { ICachePlugin } from '@azure/msal-common/node';
+import { ICrypto } from '@azure/msal-common/node';
+import { IdTokenCache } from '@azure/msal-common/node';
+import { IdTokenClaims } from '@azure/msal-common/node';
+import { IdTokenEntity } from '@azure/msal-common/node';
+import { INativeBrokerPlugin } from '@azure/msal-common/node';
+import { INetworkModule } from '@azure/msal-common/node';
+import { InteractionRequiredAuthError } from '@azure/msal-common/node';
+import { InteractionRequiredAuthErrorCodes } from '@azure/msal-common/node';
+import { InteractionRequiredAuthErrorMessage } from '@azure/msal-common/node';
+import { ISerializableTokenCache } from '@azure/msal-common/node';
+import { Logger } from '@azure/msal-common/node';
+import { LoggerOptions } from '@azure/msal-common/node';
+import { LogLevel } from '@azure/msal-common/node';
+import { NetworkRequestOptions } from '@azure/msal-common/node';
+import { NetworkResponse } from '@azure/msal-common/node';
+import { PkceCodes } from '@azure/msal-common/node';
+import { PromptValue } from '@azure/msal-common/node';
+import { ProtocolMode } from '@azure/msal-common/node';
+import { RefreshTokenCache } from '@azure/msal-common/node';
+import { RefreshTokenEntity } from '@azure/msal-common/node';
+import { ResponseMode } from '@azure/msal-common/node';
+import { ServerAuthorizationCodeResponse } from '@azure/msal-common/node';
+import { ServerError } from '@azure/msal-common/node';
+import { ServerTelemetryEntity } from '@azure/msal-common/node';
+import { ServerTelemetryManager } from '@azure/msal-common/node';
+import { StaticAuthorityOptions } from '@azure/msal-common/node';
+import { ThrottlingEntity } from '@azure/msal-common/node';
+import { TokenCacheContext } from '@azure/msal-common/node';
+import { TokenKeys } from '@azure/msal-common/node';
+import { ValidCacheType } from '@azure/msal-common/node';
+import { ValidCredentialType } from '@azure/msal-common/node';
 
 export { AccountInfo }
 
@@ -122,12 +122,6 @@ export type BrokerOptions = {
     nativeBrokerPlugin?: INativeBrokerPlugin;
 };
 
-// Warning: (ae-forgotten-export) The symbol "NodeConfiguration" needs to be exported by the entry point index.d.ts
-// Warning: (ae-internal-missing-underscore) The name "buildAppConfiguration" should be prefixed with an underscore because the declaration is marked as @internal
-//
-// @internal
-export function buildAppConfiguration({ auth, broker, cache, system, telemetry, }: Configuration): NodeConfiguration;
-
 // @public
 export type CacheKVStore = Record<string, ValidCacheType>;
 
@@ -144,10 +138,11 @@ export abstract class ClientApplication {
     acquireTokenByRefreshToken(request: RefreshTokenRequest): Promise<AuthenticationResult | null>;
     acquireTokenByUsernamePassword(request: UsernamePasswordRequest): Promise<AuthenticationResult | null>;
     acquireTokenSilent(request: SilentFlowRequest): Promise<AuthenticationResult>;
-    protected buildOauthClientConfiguration(authority: string, requestCorrelationId: string, serverTelemetryManager?: ServerTelemetryManager, azureRegionConfiguration?: AzureRegionConfiguration, azureCloudOptions?: AzureCloudOptions): Promise<ClientConfiguration>;
+    protected buildOauthClientConfiguration(authority: string, requestCorrelationId: string, redirectUri: string, serverTelemetryManager?: ServerTelemetryManager, azureRegionConfiguration?: AzureRegionConfiguration, azureCloudOptions?: AzureCloudOptions): Promise<ClientConfiguration>;
     clearCache(): void;
     protected clientAssertion: ClientAssertion;
     protected clientSecret: string;
+    // Warning: (ae-forgotten-export) The symbol "NodeConfiguration" needs to be exported by the entry point index.d.ts
     protected config: NodeConfiguration;
     // (undocumented)
     protected readonly cryptoProvider: CryptoProvider;
@@ -161,8 +156,6 @@ export abstract class ClientApplication {
     protected logger: Logger;
     setLogger(logger: Logger): void;
     protected storage: NodeStorage;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     protected validateState(state: string, cachedState: string): void;
 }
 
@@ -190,12 +183,9 @@ export { ClientConfigurationErrorCodes }
 
 export { ClientConfigurationErrorMessage }
 
-// Warning: (ae-missing-release-tag) "ClientCredentialClient" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-//
 // @public
 export class ClientCredentialClient extends BaseClient {
     constructor(configuration: ClientConfiguration, appTokenProvider?: IAppTokenProvider);
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     acquireToken(request: CommonClientCredentialRequest): Promise<AuthenticationResult | null>;
     getCachedAuthenticationResult(request: CommonClientCredentialRequest, config: ClientConfiguration | ManagedIdentityConfiguration, cryptoUtils: ICrypto, authority: Authority, cacheManager: CacheManager, serverTelemetryManager?: ServerTelemetryManager | null): Promise<[AuthenticationResult | null, CacheOutcome]>;
 }
@@ -230,44 +220,29 @@ export class CryptoProvider implements ICrypto {
     base64UrlEncode(): string;
     clearKeystore(): Promise<boolean>;
     createNewGuid(): string;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     encodeKid(): string;
     generatePkceCodes(): Promise<PkceCodes>;
     getPublicKeyThumbprint(): Promise<string>;
     hashString(plainText: string): Promise<string>;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     removeTokenBindingKey(): Promise<boolean>;
     signJwt(): Promise<string>;
 }
 
-// Warning: (ae-missing-release-tag) "Deserializer" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-//
-// @public
+// @internal
 class Deserializer {
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     static deserializeAccessTokens(accessTokens: Record<string, SerializedAccessTokenEntity>): AccessTokenCache;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     static deserializeAccounts(accounts: Record<string, SerializedAccountEntity>): AccountCache;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     static deserializeAllCache(jsonCache: JsonCache): InMemoryCache;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     static deserializeAppMetadata(appMetadata: Record<string, SerializedAppMetadataEntity>): AppMetadataCache;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     static deserializeIdTokens(idTokens: Record<string, SerializedIdTokenEntity>): IdTokenCache;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     static deserializeJSONBlob(jsonFile: string): JsonCache;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     static deserializeRefreshTokens(refreshTokens: Record<string, SerializedRefreshTokenEntity>): RefreshTokenCache;
 }
 
-// Warning: (ae-missing-release-tag) "DeviceCodeClient" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-//
 // @public
 export class DeviceCodeClient extends BaseClient {
     constructor(configuration: ClientConfiguration);
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     acquireToken(request: CommonDeviceCodeRequest): Promise<AuthenticationResult | null>;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     createExtraQueryParameters(request: CommonDeviceCodeRequest): string;
 }
 
@@ -277,27 +252,18 @@ export type DeviceCodeRequest = Partial<Omit<CommonDeviceCodeRequest, "scopes" |
     deviceCodeCallback: (response: DeviceCodeResponse) => void;
 };
 
-// Warning: (ae-missing-release-tag) "DistributedCachePlugin" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-//
-// @public (undocumented)
+// @public
 export class DistributedCachePlugin implements ICachePlugin {
     constructor(client: ICacheClient, partitionManager: IPartitionManager);
-    // (undocumented)
     afterCacheAccess(cacheContext: TokenCacheContext): Promise<void>;
-    // (undocumented)
     beforeCacheAccess(cacheContext: TokenCacheContext): Promise<void>;
 }
 
 export { IAppTokenProvider }
 
-// Warning: (ae-missing-release-tag) "ICacheClient" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-//
-// @public (undocumented)
+// @public
 export interface ICacheClient {
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     get(key: string): Promise<string>;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     set(key: string, value: string): Promise<string>;
 }
 
@@ -351,7 +317,7 @@ export { InteractionRequiredAuthErrorCodes }
 export { InteractionRequiredAuthErrorMessage }
 
 // @public
-export type InteractiveRequest = Pick<AuthorizationUrlRequest, "authority" | "correlationId" | "claims" | "azureCloudOptions" | "account" | "extraQueryParameters" | "tokenQueryParameters" | "extraScopesToConsent" | "loginHint" | "prompt"> & {
+export type InteractiveRequest = Partial<Omit<CommonAuthorizationUrlRequest, "scopes" | "redirectUri" | "requestedClaimsHash" | "storeInCache">> & {
     openBrowser: (url: string) => Promise<void>;
     scopes?: Array<string>;
     successTemplate?: string;
@@ -368,11 +334,8 @@ declare namespace internals {
 }
 export { internals }
 
-// Warning: (ae-missing-release-tag) "IPartitionManager" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-//
-// @public (undocumented)
+// @public
 export interface IPartitionManager {
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     extractKey(accountEntity: AccountEntity): Promise<string>;
     getKey(): Promise<string>;
 }
@@ -424,16 +387,12 @@ export class ManagedIdentityApplication {
     getManagedIdentitySource(): ManagedIdentitySourceNames;
 }
 
-// Warning: (ae-missing-release-tag) "ManagedIdentityConfiguration" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-//
 // @public (undocumented)
 export type ManagedIdentityConfiguration = {
     managedIdentityIdParams?: ManagedIdentityIdParams;
     system?: NodeSystemOptions;
 };
 
-// Warning: (ae-missing-release-tag) "ManagedIdentityIdParams" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-//
 // @public (undocumented)
 export type ManagedIdentityIdParams = {
     userAssignedClientId?: string;
@@ -441,14 +400,9 @@ export type ManagedIdentityIdParams = {
     userAssignedObjectId?: string;
 };
 
-// Warning: (tsdoc-escape-right-brace) The "}" character should be escaped using a backslash to avoid confusion with a TSDoc inline tag
-// Warning: (tsdoc-escape-right-brace) The "}" character should be escaped using a backslash to avoid confusion with a TSDoc inline tag
-// Warning: (tsdoc-malformed-inline-tag) Expecting a TSDoc tag starting with "{@"
-// Warning: (tsdoc-malformed-inline-tag) Expecting a TSDoc tag starting with "{@"
-// Warning: (ae-missing-release-tag) "ManagedIdentityRequestParams" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-//
 // @public
 export type ManagedIdentityRequestParams = {
+    claims?: string;
     forceRefresh?: boolean;
     resource: string;
 };
@@ -495,7 +449,7 @@ export type NodeAuthOptions = {
 export class NodeStorage extends CacheManager {
     constructor(logger: Logger, clientId: string, cryptoImpl: ICrypto, staticAuthorityOptions?: StaticAuthorityOptions);
     cacheToInMemoryCache(cache: CacheKVStore): InMemoryCache;
-    clear(): Promise<void>;
+    clear(): void;
     containsKey(key: string): boolean;
     emitChange(): void;
     static generateInMemoryCache(cache: string): InMemoryCache;
@@ -508,7 +462,6 @@ export class NodeStorage extends CacheManager {
     getAuthorityMetadata(key: string): AuthorityMetadataEntity | null;
     getAuthorityMetadataKeys(): Array<string>;
     getCache(): CacheKVStore;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     getCachedAccountEntity(accountKey: string): AccountEntity | null;
     getIdTokenCredential(idTokenKey: string): IdTokenEntity | null;
     getInMemoryCache(): InMemoryCache;
@@ -522,7 +475,6 @@ export class NodeStorage extends CacheManager {
     inMemoryCacheToCache(inMemoryCache: InMemoryCache): CacheKVStore;
     registerChangeEmitter(func: () => void): void;
     removeItem(key: string): boolean;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     removeOutdatedAccount(accountKey: string): void;
     setAccessTokenCredential(accessToken: AccessTokenEntity): void;
     setAccount(account: AccountEntity): void;
@@ -547,19 +499,14 @@ export type NodeSystemOptions = {
     disableInternalRetries?: boolean;
 };
 
-// Warning: (ae-missing-release-tag) "NodeTelemetryOptions" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-//
 // @public (undocumented)
 export type NodeTelemetryOptions = {
     application?: ApplicationTelemetry;
 };
 
-// Warning: (ae-missing-release-tag) "OnBehalfOfClient" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-//
 // @public
 export class OnBehalfOfClient extends BaseClient {
     constructor(configuration: ClientConfiguration);
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     acquireToken(request: CommonOnBehalfOfRequest): Promise<AuthenticationResult | null>;
 }
 
@@ -578,10 +525,8 @@ export class PublicClientApplication extends ClientApplication implements IPubli
     constructor(configuration: Configuration);
     acquireTokenByDeviceCode(request: DeviceCodeRequest): Promise<AuthenticationResult | null>;
     acquireTokenInteractive(request: InteractiveRequest): Promise<AuthenticationResult>;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     acquireTokenSilent(request: SilentFlowRequest): Promise<AuthenticationResult>;
     getAllAccounts(): Promise<AccountInfo[]>;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     signOut(request: SignOutRequest): Promise<void>;
 }
 
@@ -658,23 +603,14 @@ export type SerializedRefreshTokenEntity = {
     realm?: string;
 };
 
-// Warning: (ae-missing-release-tag) "Serializer" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-//
-// @public (undocumented)
+// @internal
 class Serializer {
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     static serializeAccessTokens(atCache: AccessTokenCache): Record<string, SerializedAccessTokenEntity>;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     static serializeAccounts(accCache: AccountCache): Record<string, SerializedAccountEntity>;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     static serializeAllCache(inMemCache: InMemoryCache): JsonCache;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     static serializeAppMetadata(amdtCache: AppMetadataCache): Record<string, SerializedAppMetadataEntity>;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     static serializeIdTokens(idTCache: IdTokenCache): Record<string, SerializedIdTokenEntity>;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     static serializeJSONBlob(data: JsonCache): string;
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     static serializeRefreshTokens(rtCache: RefreshTokenCache): Record<string, SerializedRefreshTokenEntity>;
 }
 
@@ -682,8 +618,6 @@ export { ServerAuthorizationCodeResponse }
 
 export { ServerError }
 
-// Warning: (ae-missing-release-tag) "SignOutRequest" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-//
 // @public (undocumented)
 export type SignOutRequest = {
     account: AccountInfo;
@@ -691,7 +625,7 @@ export type SignOutRequest = {
 };
 
 // @public
-export type SilentFlowRequest = Partial<Omit<CommonSilentFlowRequest, "account" | "scopes" | "resourceRequestMethod" | "resourceRequestUri" | "requestedClaimsHash" | "storeInCache">> & {
+export type SilentFlowRequest = Partial<Omit<CommonSilentFlowRequest, "account" | "scopes" | "requestedClaimsHash" | "storeInCache">> & {
     account: AccountInfo;
     scopes: Array<string>;
 };
@@ -711,12 +645,9 @@ export class TokenCache implements ISerializableTokenCache, ITokenCache {
 
 export { TokenCacheContext }
 
-// Warning: (ae-missing-release-tag) "UsernamePasswordClient" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-//
 // @public
 export class UsernamePasswordClient extends BaseClient {
     constructor(configuration: ClientConfiguration);
-    // Warning: (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
     acquireToken(request: CommonUsernamePasswordRequest): Promise<AuthenticationResult | null>;
 }
 
@@ -729,39 +660,11 @@ export type UsernamePasswordRequest = Partial<Omit<CommonUsernamePasswordRequest
 
 export { ValidCacheType }
 
-// Warning: (ae-missing-release-tag) "version" is part of the package's API, but it is missing a release tag (@alpha, @beta, @public, or @internal)
-//
 // @public (undocumented)
-export const version = "2.12.0";
+export const version = "2.15.0";
 
 // Warnings were encountered during analysis:
 //
-// src/client/ClientCredentialClient.ts:235:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/ClientCredentialClient.ts:236:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/ClientCredentialClient.ts:333:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/DeviceCodeClient.ts:73:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/DeviceCodeClient.ts:123:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/DeviceCodeClient.ts:124:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/DeviceCodeClient.ts:125:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/DeviceCodeClient.ts:193:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/DeviceCodeClient.ts:194:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/DeviceCodeClient.ts:236:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/DeviceCodeClient.ts:237:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/DeviceCodeClient.ts:329:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/DeviceCodeClient.ts:330:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/OnBehalfOfClient.ts:89:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/OnBehalfOfClient.ts:175:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/OnBehalfOfClient.ts:175:31 - (tsdoc-param-tag-with-invalid-type) The @param block should not include a JSDoc-style '{type}'
-// src/client/OnBehalfOfClient.ts:201:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/OnBehalfOfClient.ts:202:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/OnBehalfOfClient.ts:203:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/OnBehalfOfClient.ts:249:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/OnBehalfOfClient.ts:250:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/OnBehalfOfClient.ts:310:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/PublicClientApplication.ts:310:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/UsernamePasswordClient.ts:74:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/UsernamePasswordClient.ts:75:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
-// src/client/UsernamePasswordClient.ts:114:8 - (tsdoc-param-tag-missing-hyphen) The @param block should be followed by a parameter name and then a hyphen
 // src/index.ts:8:12 - (tsdoc-characters-after-block-tag) The token "@azure" looks like a TSDoc tag but contains an invalid character "/"; if it is not a tag, use a backslash to escape the "@"
 // src/index.ts:8:4 - (tsdoc-undefined-tag) The TSDoc tag "@module" is not defined in this configuration
 

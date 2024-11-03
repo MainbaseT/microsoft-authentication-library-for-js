@@ -35,6 +35,7 @@ import {
 } from "@azure/msal-common";
 import {
     AUTHENTICATION_RESULT,
+    DEVICE_CODE_RESPONSE,
     ID_TOKEN_CLAIMS,
     RANDOM_TEST_GUID,
     TEST_CONFIG,
@@ -341,6 +342,7 @@ export class ClientTestUtils {
             authOptions: {
                 clientId: TEST_CONFIG.MSAL_CLIENT_ID,
                 authority: authority,
+                redirectUri: TEST_CONFIG.REDIRECT_URI,
             },
             storageInterface: mockStorage,
             networkInterface: mockHttpClient,
@@ -430,25 +432,27 @@ export class ClientTestUtils {
 }
 
 interface checks {
-    dstsScope?: boolean | undefined;
-    graphScope?: boolean | undefined;
-    clientId?: boolean | undefined;
-    grantType?: string | undefined;
-    clientSecret?: boolean | undefined;
-    clientSku?: boolean | undefined;
-    clientVersion?: boolean | undefined;
-    clientOs?: boolean | undefined;
-    clientCpu?: boolean | undefined;
-    appName?: boolean | undefined;
-    appVersion?: boolean | undefined;
-    msLibraryCapability?: boolean | undefined;
-    claims?: boolean | undefined;
-    testConfigAssertion?: boolean | undefined;
-    testRequestAssertion?: boolean | undefined;
-    testAssertionType?: boolean | undefined;
-    responseType?: boolean | undefined;
-    username?: string | undefined;
-    password?: string | undefined;
+    dstsScope?: boolean;
+    graphScope?: boolean;
+    clientId?: boolean;
+    grantType?: string;
+    clientSecret?: boolean;
+    clientSku?: boolean;
+    clientVersion?: boolean;
+    clientOs?: boolean;
+    clientCpu?: boolean;
+    appName?: boolean;
+    appVersion?: boolean;
+    msLibraryCapability?: boolean;
+    claims?: boolean;
+    testConfigAssertion?: boolean;
+    testRequestAssertion?: boolean;
+    testAssertionType?: boolean;
+    responseType?: boolean;
+    username?: string;
+    password?: string;
+    deviceCode?: boolean;
+    queryString?: boolean;
 }
 
 export const checkMockedNetworkRequest = (
@@ -477,7 +481,7 @@ export const checkMockedNetworkRequest = (
         ).toBe(checks.clientId);
     }
 
-    if (checks.grantType !== undefined) {
+    if (checks.grantType) {
         expect(
             returnVal.includes(
                 `${AADServerParamKeys.GRANT_TYPE}=${checks.grantType}`
@@ -597,7 +601,7 @@ export const checkMockedNetworkRequest = (
         ).toBe(checks.responseType);
     }
 
-    if (checks.username !== undefined) {
+    if (checks.username) {
         expect(
             returnVal.includes(
                 `${PasswordGrantConstants.username}=${checks.username}`
@@ -605,10 +609,22 @@ export const checkMockedNetworkRequest = (
         ).toBe(true);
     }
 
-    if (checks.password !== undefined) {
+    if (checks.password) {
         expect(
             returnVal.includes(
                 `${PasswordGrantConstants.password}=${checks.password}`
+            )
+        ).toBe(true);
+    }
+
+    if (checks.deviceCode) {
+        expect(returnVal.includes(DEVICE_CODE_RESPONSE.deviceCode)).toBe(true);
+    }
+
+    if (checks.queryString) {
+        expect(
+            returnVal.includes(
+                `${TEST_CONFIG.DEFAULT_GRAPH_SCOPE}%20${Constants.OPENID_SCOPE}%20${Constants.PROFILE_SCOPE}%20${Constants.OFFLINE_ACCESS_SCOPE}`
             )
         ).toBe(true);
     }
@@ -620,7 +636,7 @@ export const getClientAssertionCallback = (
     const clientAssertionCallback: ClientAssertionCallback = async (
         _config: ClientAssertionConfig
     ): Promise<string> => {
-        return await Promise.resolve(clientAssertion);
+        return Promise.resolve(clientAssertion);
     };
 
     return clientAssertionCallback;
