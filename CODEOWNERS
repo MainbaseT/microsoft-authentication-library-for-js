@@ -2,7 +2,7 @@
 
 # MSAL Angular
 /lib/msal-angular/ @jo-arroyo @tnorling @peterzenz
-/samples/msal-angular-v3-samples/ @jo-arroyo @tnorling @peterzenz
+/samples/msal-angular-samples/ @jo-arroyo @tnorling @peterzenz
 
 # MSAL Browser
 /lib/msal-browser/ @sameerag @tnorling @hectormmg @jo-arroyo @peterzenz @konstantin-msft @lalimasharda @shylasummers
@@ -24,7 +24,7 @@
 /build/ @sameerag @tnorling @hectormmg @peterzenz
 /release-scripts/ @sameerag @tnorling @hectormmg @peterzenz
 /.github/ @sameerag @tnorling @hectormmg @peterzenz
-/.pipelines/ @hectormmg @tnorling @peterzenz
+/.pipelines/ @hectormmg @tnorling @peterzenz @sameerag @konstantin-msft
 
 # MSAL Node Confidential Client Regression Tests
 .github/workflows/client-credential-benchmark.yml @AzureAD/id4s-msal-team
